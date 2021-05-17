@@ -22,7 +22,7 @@ const instrument_player = [
 ];
 //giveup
 
-const KITS = ["/sounds/wav/A", "/sounds/wav/B", "/sounds/wav/C"];
+const KITS = ["/Sound-Destroyer/Sound-Destroyer/Sound-Destroyer/sounds/wav/A", "/Sound-Destroyer/Sound-Destroyer/Sound-Destroyer/sounds/wav/B", "/Sound-Destroyer/Sound-Destroyer//Sound-Destroyer/Sound-Destroyersounds/wav/C"];
 let samplerA, samplerB;
 
 samplerA = new Tone.Sampler({
@@ -37,7 +37,7 @@ samplerA = new Tone.Sampler({
 		"F#3": instrument_player[6],
 		G3: instrument_player[7],
 	},
-	baseUrl: "/sounds/A",
+	baseUrl: "/Sound-Destroyer/sounds/A",
 	release: 1,
 });
 
@@ -53,7 +53,7 @@ samplerB = new Tone.Sampler({
 		"F#3": instrument_player[6],
 		G3: instrument_player[7],
 	},
-	baseUrl: "/sounds/B",
+	baseUrl: "/Sound-Destroyer/sounds/B",
 	release: 1,
 });
 
@@ -69,7 +69,7 @@ samplerC = new Tone.Sampler({
 		"F#3": instrument_player[6],
 		G3: instrument_player[7],
 	},
-	baseUrl: "/sounds/C",
+	baseUrl: "/Sound-Destroyer/sounds/C",
 	release: 1,
 });
 
@@ -235,11 +235,11 @@ function infoToSeq(infoTab) {
 function buildSequence(trigsSong, kit) {
 	seqSong = new Tone.Part(
 		(time, note) => {
-			if (kit == 0)
+			if (kit == 2)
 				samplerA.triggerAttack(note, time, Math.random() * (1 - 0.3) + 0.3);
-			else if (kit == 1)
+			else if (kit == 3)
 				samplerB.triggerAttack(note, time, Math.random() * (1 - 0.3) + 0.3);
-			else if (kit == 2)
+			else if (kit == 0)
 				samplerC.triggerAttack(note, time, Math.random() * (1 - 0.3) + 0.3);
 			NOTETAB = note;
 
