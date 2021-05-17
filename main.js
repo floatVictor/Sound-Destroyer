@@ -37,7 +37,7 @@ samplerA = new Tone.Sampler({
 		"F#3": instrument_player[6],
 		G3: instrument_player[7],
 	},
-	baseUrl: "/sounds/A",
+	baseUrl: "/Sound-Destroyer/sounds/A",
 	release: 1,
 });
 
@@ -53,7 +53,7 @@ samplerB = new Tone.Sampler({
 		"F#3": instrument_player[6],
 		G3: instrument_player[7],
 	},
-	baseUrl: "/sounds/B",
+	baseUrl: "/Sound-Destroyer/sounds/B",
 	release: 1,
 });
 
@@ -69,7 +69,7 @@ samplerC = new Tone.Sampler({
 		"F#3": instrument_player[6],
 		G3: instrument_player[7],
 	},
-	baseUrl: "/sounds/C",
+	baseUrl: "/Sound-Destroyer/sounds/C",
 	release: 1,
 });
 
