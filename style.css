@@ -1,0 +1,116 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	font-weight: 0;
+	text-transform: uppercase;
+	color: black;
+}
+
+@font-face {
+	font-family: "Druk";
+	src: url("font/Druk.ttf");
+}
+
+h1 {
+	margin: 8px;
+	font-size: 28;
+	margin-left: 0;
+}
+
+h2 {
+	font-size: 10;
+}
+
+.container {
+	width: 98vw;
+	height: 98vh;
+}
+
+.multi-button {
+	padding-top: 10px;
+}
+
+.button {
+	display: inline-block;
+	padding: 0.5em 3em;
+	border: 2px solid #080808;
+	margin: 0 0.3em 0.3em 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: "Druk";
+	font-weight: 400;
+	/* color: black; */
+	background: none;
+	text-align: center;
+	transition: all 0.15s;
+	cursor: pointer;
+	transition: border 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.button:hover {
+	color: #d3d3d3;
+	border-color: #d3d3d3;
+	transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+canvas {
+	position: relative;
+	display: block;
+	pointer-events: none;
+	z-index: -5;
+	position: absolute;
+}
+
+.musicContainer {
+	font-family: "Druk";
+	padding: auto;
+	margin: 10px;
+	z-index: 10;
+	transition: color 0.5s ease-in-out;
+}
+
+/* MUSIC CONTAINER WHITE */
+.musicContainerWhite {
+	color: rgb(255, 255, 255);
+}
+.musicContainerWhite button {
+	border: solid 2px white;
+	color: rgb(255, 255, 255);
+}
+.musicContainerWhite .track::-webkit-slider-thumb {
+	background-color: white;
+}
+
+.musicContainerWhite .button:hover {
+	color: #4d4d4d;
+	border-color: #4d4d4d;
+	transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+.track {
+	position: relative;
+	-webkit-appearance: none;
+	width: 13%;
+	height: 3px;
+	background-color: #818181;
+	outline: none;
+	opacity: 0.7;
+	margin: 5px;
+	-webkit-transition: 0.5s;
+	transition: opacity 0.5s ease-in-out;
+}
+.track:hover {
+	opacity: 1;
+}
+.track::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 10px;
+	height: 10px;
+	background-color: #080808;
+	cursor: pointer;
+	transition: background-color 0.5s ease-in-out;
+}

@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="musicContainer musicContainerWhite">
+            <h1>Sound Detroyer</h1>
+            <h2>created by Ulysse Roussel & Victor Guichard</h2>
+            <div class="algoP">
+                <br>Algorithm parameters</br>
+                <div>
+                    <input class="track density" type="range"
+                            min="0" max="0.15" value="0.07" step="0.001">
+                    <label for="density">Density</label>
+                </div>
+                <div>
+                    <input class="track temperature" type="range"
+                            min="1" max="1.5" value="1.2" step="0.001">
+                    <label for="temperature">Chaos</label>
+                </div>
+                <div>
+                    <input class="track bpm" type="range"
+                            min="20" max="170" value="105" step="5">
+                    <label for="bpm">Tempo</label>
+                </div>
+                <div>
+                    <input class="track kit" type="range"
+                            min="0" max="2" value="0" step="1">
+                    <label for="kit">kit</label>
+                </div>
+            </div>
+            <div class="filters">
+                <br>Filters:</br>
+                <div>
+                    <input class="track lp" type="range"
+                            min="20" max="20000" value="20000" step="0.1">
+                    <label for="lowpass">Lowpass filter</label>
+                </div>
+
+                <div>
+                    <input class="track hp" type="range"
+                            min="20" max="5000" value="20" step="0.1">
+                    <label for="hightpass">Highpass filter</label>
+                </div>
+            </div>
+            <div class="parallele chain">
+                <br>Parallele chain effects:</br>
+                <div>
+                    <input class="track dist" type="range" name="dist"
+                            min="0" max="1" value="0" step="0.01">
+                    <label for="distortion">Distortion</label>
+                </div>
+                <div>
+                    <input class="track volDist" type="range" name="volDist" 
+                            min="-24" max="6" value="-12" step="0.5">
+                    <label for="volDist">Volume send</label>
+                </div>
+                <div>
+                    <input class="track chain1" type="range" name="chain1" 
+                            min="-24" max="0" value="-12" step="0.5">
+                    <label for="chain1">Send phaser & delay</label>
+                </div>
+                <div>
+                    <input class="track chain2" type="range" name="chain2" 
+                            min="-24" max="0" value="-12" step="0.5">
+                    <label for="chain2">Send shifter & reverb</label>
+                </div>
+            </div>
+            <div class="mstEffects">
+                <br>Master chain effects:</br>
+                <div>
+                    <input class="track mstDist" type="range" name="distortion"
+                            min="0" max="0.35" value="0" step="0.001">
+                    <label for="distortion">Distortion</label>
+                </div>
+
+                <div>
+                    <input class="track mstShift" type="range" name="shifter" 
+                            min="-60" max="60" value="1" step="0.1">
+                    <label for="shifter">Frequency shifter</label>
+                </div>
+            </div>
+            <p></p>
+            <div class = multi-button>
+                <button class="button button1">Generate</button>
+                <button class="button button2">Stop</button>
+            </div>
+            
+        </div>
+        <!-- <img src="brucou.png"> -->
+        <div class="sketchContainer">
+            <div id="canvas">
+            </div>
+        </div>
+    </div>
+    </body> 
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.21.0"></script>
+    <script src="https://tonejs.github.io/build/Tone.js"></script>
+    <script src="libraries/p5.min.js"></script>
+    <script src="main.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>
