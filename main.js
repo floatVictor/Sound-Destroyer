@@ -344,20 +344,22 @@ volDist.send("phaser");
 let distMst, shiftMst, multiband, hp, lp;
 let volDistMst, volShiftMst;
 
+const limiter = new Tone.Limiter(0).toMaster();
+
 multiband = new Tone.MultibandCompressor({
 	lowFrequency: 200,
 	highFrequency: 1300,
 	low: {
-		threshold: -16,
+		threshold: -6,
 	},
 	mid: {
-		threshold: -12,
-	},
-	high: {
 		threshold: -4,
 	},
+	high: {
+		threshold: -2,
+	},
 });
-multiband.toMaster();
+multiband.connect(limiter);
 
 let lowPassFreq = new Tone.Signal(20000, Tone.Frequency);
 lp = new Tone.Filter({
