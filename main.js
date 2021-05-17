@@ -22,7 +22,7 @@ const instrument_player = [
 ];
 //giveup
 
-const KITS = ["/sounds/A", "/sounds/B", "/sounds/C"];
+const KITS = ["/Sound-Destroyer/sounds/A", "/Sound-Destroyer/sounds/B", "/Sound-Destroyer/sounds/C"];
 let samplerA, samplerB;
 
 samplerA = new Tone.Sampler({
