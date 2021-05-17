@@ -235,9 +235,9 @@ function infoToSeq(infoTab) {
 function buildSequence(trigsSong, kit) {
 	seqSong = new Tone.Part(
 		(time, note) => {
-			if (kit == 2)
+			if (kit == 1)
 				samplerA.triggerAttack(note, time, Math.random() * (1 - 0.3) + 0.3);
-			else if (kit == 3)
+			else if (kit == 2)
 				samplerB.triggerAttack(note, time, Math.random() * (1 - 0.3) + 0.3);
 			else if (kit == 0)
 				samplerC.triggerAttack(note, time, Math.random() * (1 - 0.3) + 0.3);
